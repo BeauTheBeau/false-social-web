@@ -1,0 +1,331 @@
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  color: inherit;
+}
+
+/*
+  Theme
+ */
+
+:root {
+  /* Light Theme Colors */
+  --primary-500: rgba(98, 0, 234, 1);
+  --secondary-500: rgba(0, 150, 136, 1);
+  --background-light: rgba(255, 255, 255, 1);
+  --surface-light: rgba(255, 255, 255, 1);
+  --text-primary: rgba(33, 33, 33, 1);
+  --text-secondary: rgba(117, 117, 117, 1);
+  --text-disabled: rgba(158, 158, 158, 1);
+
+  /* Dark Theme Colors */
+  --primary-dark-500: rgba(187, 134, 252, 1);
+  --secondary-dark-500: rgba(0, 188, 212, 1);
+  --background-dark: rgba(18, 18, 18, 1);
+  --surface-dark: rgba(30, 30, 30, 1);
+  --text-primary-dark: rgba(255, 255, 255, 1);
+  --text-secondary-dark: rgba(176, 176, 176, 1);
+  --text-disabled-dark: rgba(117, 117, 117, 1);
+
+  /* Border Radius Variables */
+  --border-radius-small: 0.25em;
+  --border-radius-medium: 0.5em;
+  --border-radius-large: 1em;
+
+  /* Other Variables */
+  --spacing-small: 0.5em;
+  --spacing-medium: 1em;
+  --spacing-large: 2em;
+  --font-size-small: 0.8em;
+  --font-size-medium: 1em;
+  --font-size-large: 1.2em;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-500: var(--primary-dark-500);
+    --secondary-500: var(--secondary-dark-500);
+    --background-light: var(--background-dark);
+    --surface-light: var(--surface-dark);
+    --text-primary: var(--text-primary-dark);
+    --text-secondary: var(--text-secondary-dark);
+    --text-disabled: var(--text-disabled-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-500: rgba(98, 0, 234, 1);
+    --secondary-500: rgba(0, 150, 136, 1);
+    --background-light: rgba(255, 255, 255, 1);
+    --surface-light: rgba(255, 255, 255, 1);
+    --text-primary: rgba(33, 33, 33, 1);
+    --text-secondary: rgba(117, 117, 117, 1);
+    --text-disabled: rgba(158, 158, 158, 1);
+  }
+}
+
+/*
+  Global
+ */
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  padding: var(--spacing-medium);
+}
+
+main {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: var(--spacing-medium);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  section {
+    margin: var(--spacing-medium) 0;
+
+    .section__header {
+      margin-bottom: var(--spacing-medium);
+
+      h3 {
+        font-size: var(--font-size-large);
+      }
+
+      p {
+        font-size: var(--font-size-small);
+        color: var(--text-secondary);
+      }
+    }
+
+    .section__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-medium);
+    }
+  }
+}
+
+.signup__field {
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  border: 1px solid var(--text-disabled);
+  border-radius: var(--border-radius-small);
+  padding: var(--spacing-small);
+
+  label {
+    font-size: var(--font-size-small);
+    color: var(--text-secondary);
+  }
+
+  input {
+    padding: var(--spacing-small);
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--text-disabled);
+    font-size: var(--font-size-medium);
+
+    background-color: var(--surface-light);
+    color: var(--text-primary);
+  }
+}
+
+button {
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius-small);
+  border: none;
+  font-size: var(--font-size-medium);
+
+  background-color: var(--primary-500);
+  color: black;
+
+  transition: 0.2s ease-in-out;
+
+
+  &:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+  }
+
+}
+
+
+/*
+
+    <article class="post">
+
+      <div class="post__header">
+        <img src="img/logo.png" alt="False Social Logo" class="post__avatar">
+        <h4 class="post__user"><a href="#">False Social</a></h4>
+        <p class="post__time">Just now</p>
+      </div>
+
+      <div class="post__content">
+        <p>Welcome to False Social.</p>
+      </div>
+
+      <div class="post__actions">
+        <a href="#" class="post__action" id="post__action__like" title="Like this post">
+          <span class="material-symbols-outlined">favorite</span>
+          <span class="post__action__count">0</span>
+        </a>
+
+        <a href="#" class="post__action" id="post__action__comment" title="Comment on this post">
+          <span class="material-symbols-outlined">comment</span>
+          <span class="post__action__count">0</span>
+        </a>
+
+        <a href="#" class="post__action" id="post__action__share" title="Share this post">
+          <span class="material-symbols-outlined">share</span>
+          <span class="post__action__count">0</span>
+        </a>
+      </div>
+    </article>
+ */
+
+.post {
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-light);
+  border-radius: var(--border-radius-medium);
+  padding: var(--spacing-medium);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+
+  .post__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-medium);
+
+    .post__avatar {
+      height: 1.5em;
+      border-radius: 50%;
+      margin-right: var(--spacing-small);
+    }
+
+    .post__user {
+      font-size: var(--font-size-medium);
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-right: var(--spacing-small);
+
+      a {
+        color: var(--text-primary);
+        text-decoration: none;
+      }
+    }
+
+    .post__time {
+      font-size: var(--font-size-small);
+      color: var(--text-secondary);
+    }
+  }
+
+  .post__content {
+    margin-bottom: var(--spacing-medium);
+  }
+
+  .post__actions {
+
+    display: flex;
+    align-items: center;
+    width: auto;
+    border-radius: 59em;
+    overflow: hidden;
+    align-self: flex-start;
+
+    a {
+
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--text-primary);
+
+      background-color: var(--background-light);
+      padding: var(--spacing-small) var(--spacing-medium);
+
+      transition: all 0.2s ease-in-out;
+
+      .post__action__count {
+        font-size: var(--font-size-small);
+        margin-left: var(--spacing-small);
+      }
+
+      .material-symbols-outlined {
+        font-size: var(--font-size-medium);
+        transition: all 0.1s ease-in-out;
+      }
+
+      &:hover {
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 1, 'wght' 400,
+          'GRAD' 0,
+          'opsz' 48;
+        }
+
+        &[data-use="post__action__like"] {
+          background-color: rgba(255, 0, 0, 0.25);
+
+          .material-symbols-outlined {
+            color: rgba(255, 0, 0, 1);
+          }
+        }
+
+        &[data-use="post__action__comment"] {
+          background-color: rgba(0, 0, 255, 0.25);
+
+          .material-symbols-outlined {
+            color: rgba(0, 0, 255, 1);
+          }
+        }
+
+        &[data-use="post__action__share"] {
+          background-color: rgba(0, 255, 0, 0.25);
+
+          .material-symbols-outlined {
+            color: rgba(0, 255, 0, 1);
+          }
+        }
+
+        &[data-use="post__action__expand"] {
+          background-color: rgba(128, 128, 0, 0.25);
+
+          .material-symbols-outlined {
+            color: rgba(128, 128, 0, 1);
+          }
+        }
+      }
+    }
+  }
+}
