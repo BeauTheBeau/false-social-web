@@ -1,0 +1,13 @@
+{
+  "name": "false-social",
+  "version": "0.0.1",
+  "description": "A parody social media site",
+  "keywords": [
+    "social",
+    "media",
+    "parody"
+  ],
+  "license": "MIT",
+  "author": "BeauTheBeau",
+  "scripts": {}
+}

@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    BeauTheBeau - Lead Developer - https://github.com/BeauTheBeau
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, Node.js, Express.js, MongoDB, Mongoose, Google Fonts
