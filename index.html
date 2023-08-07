@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>False Social | A Parody Social Media</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="img/logo.png">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<!-- Add your site or application content here -->
+<main>
+
+  <h1>False Social</h1>
+  <h2>A Parody Social Media Site</h2>
+  <hr>
+
+  <section>
+    <div class="section__header">
+      <h3>Get involved</h3>
+      <p>Sign up for an account and start posting!</p>
+    </div>
+
+    <div class="section__content">
+      <div class="signup__field">
+        <label for="signup__username">Username</label>
+        <p>Pick a unique username that represents you.</p>
+        <input type="text" id="signup__username" name="signup__username" placeholder="Username">
+      </div>
+
+      <div class="signup__field">
+        <label for="signup__password">Password</label>
+        <p>Choose a password that is at least 8 characters long.</p>
+        <input type="password" id="signup__password" name="signup__password" placeholder="Password">
+      </div>
+
+      <div class="signup__field">
+        <label for="signup__password__confirm">Confirm Password</label>
+        <p>Confirm your password.</p>
+        <input type="password" id="signup__password__confirm" name="signup__password__confirm"
+               placeholder="Confirm Password">
+      </div>
+
+
+      <div class="signup__actions">
+        <button class="signup__action" data-use="signup__action__submit">Join for Free</button>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <section>
+    <div class="section__header">
+      <h3>Latest Posts</h3>
+      <p>Here are the latest posts from our users.</p>
+    </div>
+
+    <div class="posts">
+      <article class="post">
+
+        <div class="post__header">
+          <img src="img/logo.png" alt="False Social Logo" class="post__avatar">
+          <h4 class="post__user"><a href="#">False Social</a></h4>
+          <p class="post__time">Just now</p>
+        </div>
+
+        <div class="post__content">
+          <p>Welcome to False Social.</p>
+        </div>
+
+        <div class="post__actions">
+          <a href="#" class="post__action" data-use="post__action__like" title="Like this post">
+            <span class="material-symbols-outlined">favorite</span>
+            <span class="post__action__count">0</span>
+          </a>
+
+          <a href="#" class="post__action" data-use="post__action__comment" title="Comment on this post">
+            <span class="material-symbols-outlined">comment</span>
+            <span class="post__action__count">0</span>
+          </a>
+
+          <a href="#" class="post__action" data-use="post__action__share" title="Share this post">
+            <span class="material-symbols-outlined">share</span>
+            <span class="post__action__count">0</span>
+          </a>
+
+          <a href="#" class="post__action" data-use="post__action__expand" title="Expand this post">
+            <span class="material-symbols-outlined">arrow_circle_right</span>
+            <span class="post__action__count">0</span>
+          </a>
+
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
